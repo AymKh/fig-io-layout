@@ -1,1 +1,30 @@
-<p>tab-content works!</p>
+<div
+    id="tab__content"
+    class="h-[500px] flex flex-row items-start justify-between bg-black mt-1"
+>
+    <div class="leftSection w-[400px] h-full p-4 text-white">
+        <div
+            class="icon block w-[70px] h-[70px] bg-yellow-200 rounded-lg mt-4"
+        ></div>
+        <h2 class="text-4xl font-['Inter'] font-semibold mt-8">
+            {{ DATA.title }}
+        </h2>
+        <h4 class="text-base font-['Inter'] font-medium">
+            {{ DATA.tag_line }}
+        </h4>
+        <p class="text-sm font-['Inter'] mt-4">{{ DATA.copy }}</p>
+
+        <a
+            href="#"
+            class="text-sm font-['Inter'] font-medium rounded-md w-fit border border-[#D4D4D4] px-4 py-2 mt-8 flex flex-row items-center justify-between"
+        >
+            <span class="mr-4">{{ DATA.call_to_action }}</span>
+            <i class="bi bi-arrow-right"></i>
+        </a>
+    </div>
+    <div
+        class="rightSection w-[600px] h-full flex flex-col justify-center items-center"
+    >
+        <video [src]="DATA.image" autoplay loop class="w-[580px]"></video>
+    </div>
+</div>
